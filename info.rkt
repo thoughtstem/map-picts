@@ -1,6 +1,6 @@
 #lang info
 (define collection "map-picts")
-(define deps '("base"))
+(define deps '("base" "map-widget"))
 (define build-deps '("scribble-lib" "racket-doc" "rackunit-lib"))
 (define scribblings '(("scribblings/map-picts.scrbl" ())))
 (define pkg-desc "Description Here")
