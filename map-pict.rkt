@@ -1,12 +1,14 @@
 #lang racket
 
-(provide map-pict)
+(provide map-pict sleep-time)
 
 (require pict
          map-widget/private/map-impl
          racket/draw
          "./util.rkt"
          )
+
+(define sleep-time (make-parameter 1))
 
 (define (map-pict width height
                   #:zoom [zoom 9]
@@ -30,7 +32,7 @@
         (send renderer draw dc x y))
       width height)
 
-  (sleep 1)
+  (sleep (sleep-time))
 
   (dc (lambda (dc x y)
         (send renderer draw dc x y))
